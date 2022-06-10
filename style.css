@@ -8,7 +8,7 @@ body {
   height: 100vw;
   width: 100%;
   background: rgb(0, 0, 0);
-  background: linear-gradient(160deg, #000000 0%, #102050 100%);
+  background: linear-gradient(160deg, #000000 20%, #1f3b8e 100%);
   color: #f4f4f4;
   font-family: "Roboto", sans-serif;
   background-repeat: no-repeat;
@@ -104,6 +104,7 @@ main .prev-button img {
   width: 50px;
   object-fit: cover;
   transition: 0.3s;
+  filter: contrast(0.5);
 }
 
 main .fourth-slide .prev-button {
