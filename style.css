@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vw;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(160deg, #000000 0%, #102050 100%);
+  color: #f4f4f4;
+  font-family: "Roboto", sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.selected {
+  background-color: #708bdb !important;
+}
+
+nav {
+  background: #040315;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  height: 35px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  column-gap: 2%;
+  padding-right: 4%;
+  height: 100%;
+}
+
+nav ul li a {
+  color: #f4f4f4;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #453db3;
+}
+
+main {
+  padding: 10vw 0;
+  height: 100%;
+}
+
+main .slide-content-container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 50%;
+}
+
+main .first-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .btn-slide-container {
+  display: grid;
+  grid-template-columns: 50px 50px;
+  place-content: center;
+  width: 100%;
+  place-content: end;
+}
+
+main .next-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 0 0 0 auto;
+}
+
+main .prev-button {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 0 0 auto;
+}
+
+main .next-button img,
+main .prev-button img {
+  cursor: pointer;
+  font-size: 30px;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+main .fourth-slide .prev-button {
+  margin: 0 auto 0 0;
+}
+
+main h1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+main h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+main .button-start {
+  position: relative;
+}
+
+main .button-start .button-image {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  transition: 3s;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rocket-animation {
+  animation-name: toLeft;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+main .button-start .button-image img {
+  width: 50px;
+  height: 50px;
+  transition: 2s;
+}
+
+main .button-start button {
+  width: 100%;
+  height: 50px;
+  background: #453db3;
+  color: #f4f4f4;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start-animation {
+  animation-name: backColor;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+main .second-slide {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  row-gap: 5%;
+}
+
+main .second-slide h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+main .second-slide .form-container {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 25px;
+}
+
+main .second-slide .form-container input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #f4f4f4;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #f4f4f4;
+  transition: 0.3s;
+  outline: none;
+}
+
+main .second-slide .form-container input[type="text"] {
+  grid-column: 1/2;
+  grid-row: 1;
+}
+
+main .second-slide .form-container input[type="email"] {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+main .second-slide .form-container input[type="tel"] {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+main .third-slide h2,
+main .fourth-slide h2,
+main .fifth-slide h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+main .third-slide .selector-jobs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0 15px;
+  width: 80%;
+  text-align: center;
+  margin: 120px auto;
+}
+
+main .third-slide .selector-jobs div input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+main .third-slide .selector-jobs div {
+  background-color: white;
+  height: 150px;
+  width: 150px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+main .third-slide .selector-jobs div:nth-child(1) {
+  background-image: url("./images/web.png");
+}
+
+main .third-slide .selector-jobs div:nth-child(2) {
+  background-image: url("./images/app.png");
+}
+
+main .third-slide .selector-jobs div:nth-child(3) {
+  background-image: url("./images/ecommerce.png");
+}
+
+main .third-slide .selector-jobs div:nth-child(4) {
+  background-image: url("./images/uxui.png");
+}
+
+main .fourth-slide .message {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 120px auto 40px;
+}
+
+main .fourth-slide .message textarea {
+  width: 100%;
+  max-width: 450px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 0 0 15px;
+}
+
+main .fourth-slide .submit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .fourth-slide .submit-container button {
+  width: 100%;
+  height: 45px;
+  max-width: 125px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #453db3;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+main .fourth-slide .submit-container button:hover {
+  background-color: #f4f4f4;
+  color: #453db3;
+}
+
+.send-animation {
+  animation-name: sendAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.send-style {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50px !important;
+  background-color: #46e653 !important;
+  text-indent: -9999% !important;
+}
+
+@keyframes toLeft {
+  0% {
+    left: 0%;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 80%;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes backColor {
+  0% {
+    background-color: #453db3;
+  }
+  100% {
+    background-color: #f4f4f4;
+  }
+}
+
+@keyframes sendAnimation {
+  0% {
+    text-indent: -9999%;
+    width: 50px;
+    height: 50px;
+  }
+  50% {
+    background-color: #46e653;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #46e653;
+    text-indent: -9999%;
+  }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 830px) {
+  main .second-slide .form-container {
+    width: 90% !important;
+  }
+
+  main .third-slide .selector-jobs {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+    margin-bottom: 20px;
+  }
+
+  main .btn-slide-container {
+    place-content: center;
+  }
+
+  main .fourth-slide .message {
+    width: 90%;
+    margin: 50px auto;
+  }
+}
